@@ -1,0 +1,31 @@
+<!--pages/home/home.wxml-->
+<view class="container">
+  <view class="main-container {{picpop.pop ? 'container-fade' : ''}}">
+    <view class="page-head" style="background-image: url(./img/background.png); background-size: 100% 100%;">
+      <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+      <block wx:else>
+        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      </block>
+    </view>
+    <view class="page-bar">
+      <view wx:for-items="{{barlist}}" class="page-bar-item" style="width: {{100 / barlist.length + '%'}}" bind:touchstart="itemTouch" bind:touchend="itemTouchend" bind:tap="itemTap" id="{{item.id}}">
+        <image src="{{imgURLCommon + item.id + (item.highlight ? '_HL' : '') + imgSuffix}}"></image>
+        <view>{{ item.name }}</view>
+      </view>
+    </view>
+    <view class="page-line"></view>
+    <view class="page-body">
+      <view class="page-body-title">{{ body.title }}</view>
+      <view class="page-body-text">{{ body.littleTitle }}</view>
+      <view class="page-body-spacing">
+        <image wx:for-items="{{piclist}}" bind:tap="picTap" class="page-body-spacing-pic" src="{{picURLCommon + 'pic_' + item.id + picSuffix}}" id="{{item.id}}"></image>
+      </view>
+      <view class="page-body-text">{{ body.appendInfo }}</view>
+    </view>
+  </view>
+  
+    <!-- picpop  -->
+    <image wx:if="{{ picpop.pop }}" class="picpop" src="{{picURLCommon + 'pic_' + picpop.id + picSuffix}}" bind:tap="picpopTap"></image>
+
+</view>
