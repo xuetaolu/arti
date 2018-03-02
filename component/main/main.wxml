@@ -1,6 +1,6 @@
 <!--pages/guide/component/main/main.wxml-->
 <view class="container">
-  <view class="page-body" style="background-image: url({{ clear ? bgFolder + bg.clearURL : bgFolder + bg.dimURL }});">
+  <view class="page-body" style="{{ bodyStyle }}">
     <slot></slot>
   </view>
   <navigator class="page-foot" url="{{ homeURL }}">

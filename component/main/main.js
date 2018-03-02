@@ -9,18 +9,14 @@ Component({
    */
   properties: {
     homeURL: String,
-    clear: Boolean,
-    bgFolder: String
+    bodyStyle: String
   },
 
   /**
    * 组件的初始数据
    */
   data: {
-    bg: {
-      clearURL: 'map_clear.png',
-      dimURL: 'map_dim.png'
-    },
+
   },
 
   /**
