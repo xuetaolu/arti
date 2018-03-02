@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "报道指引",
+  "usingComponents": {
+    "main": "./../../component/main/main"
+  }
+}

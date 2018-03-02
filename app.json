@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/notice/notice",
     "pages/home/home",
     "pages/guide/guide",
-    
     "pages/index/index"
 
   ],

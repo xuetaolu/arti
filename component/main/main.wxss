@@ -23,8 +23,16 @@ page{
 
 .page-foot{
   height: 8%;
-  background-color: #fff;
+  background-color: #f2f2f2;
   width: 100%;
+}
+
+.page-foot:active{
+  background-color: #afafaf;
+}
+
+.page-foot:hover{
+  opacity: 1;
 }
 
 .page-foot image{

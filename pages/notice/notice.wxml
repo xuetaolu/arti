@@ -1,0 +1,22 @@
+<!--pages/notice/notice.wxml-->
+<main homeURL="./../home/home" bodyStyle="background-color: white">
+
+  <view class="page-head">
+    <view class="page-head-title">校内通知</view>
+    <view class="page-head-container">
+      <input placeholder-style="font-size:14px; color:#666666" placeholder="输入关键字"></input>
+      <view class="page-head-container-line"></view>
+      <view class="page-head-container-icon">
+        <image src="./img/searchIcon.png"></image>
+      </view>
+    </view>
+  </view>
+
+  <scroll-view class="page-content">
+    <view wx:for-items="{{ displaylist }}" class="page-content-item">
+      <view class="page-content-item-title">{{ item.title }}</view>
+      <view class="page-content-item-date">{{ item.date }}</view>
+    </view>
+  </scroll-view>
+
+</main>

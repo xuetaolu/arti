@@ -18,7 +18,7 @@
 
   <message-box wx:if="{{ step > finalStep }}" title="报道成功" msg="{{ option.finalMsg.msg }}" append="{{ option.finalMsg.append }}"></message-box>
 
-  <view class="container-btn-option container-btn-bottom">
+  <view class="container-btn-option container-btn-bottom" wx:if="{{ step >= firstStep }}">
     <view class="btn-option btn-bottom" bind:tap="nextstep" wx:if="{{ step >= firstStep && step <= finalStep }}">
       <text>下一步</text>
     </view>
