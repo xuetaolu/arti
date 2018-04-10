@@ -135,8 +135,8 @@ Page({
   },
 
   finish: function (e) {
-    wx.reLaunch({
-      url: './../home/home'
+    wx.navigateBack({
+      delta: 20
     })
   },
 

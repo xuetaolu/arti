@@ -1,7 +1,7 @@
 <!--pages/guide/guide.wxml-->
 <main homeURL="./../home/home" bodyStyle="background-image: url(https://www.zhxy.xyz/img/guide/{{ step != 0 ? 'map_clear.png' : 'map_dim.png'}})">
   <view class="container-btn-option" wx:if="{{ step === 0 }}">
-    <view class="btn-option" wx:for-items="{{ option.option }}" id="{{ item.msg }}" bind:tap="select" wx:key>
+    <view class="btn-option" wx:for-items="{{ option.option }}" id="{{ item.msg }}" bind:tap="select" wx:key="item.msg">
       <text>{{ item.msg }}</text>
     </view>
   </view>

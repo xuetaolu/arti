@@ -24,8 +24,8 @@ Component({
    */
   methods: {
     toHome: function(e) {
-      wx.reLaunch({
-        url: this.properties.homeURL
+      wx.navigateBack({
+        delta:20
       })
     }
   }

@@ -42,7 +42,7 @@ Page({
     var page = this;
 
     wx.request({
-      url: 'https://www.zhxy.xyz/notice.php', //仅为示例，并非真实的接口地址
+      url: 'https://www.zhxy.xyz/notice.php', 
       data: {
         start: page.data.count,
         len: page.data.lenPerTime,
@@ -90,21 +90,35 @@ Page({
     
   },
 
-  sendContent: function (e){
-    var index = e.currentTarget.id;
+  toContent: function (e){
+    //console.log(e);
+
+    var obj = this.data.displaylist[e.currentTarget.id];
+
+    var url = './content/content';
+
+    url = url + '?title=' + obj.title + '&call=' + obj.call + '&date=' + obj.date + '&content=' + obj.content;
+
+    //console.log(url);
+
+    wx.navigateTo({
+      url: url
+    })
+
+    //var index = e.currentTarget.id;
 
     //console.log(this.data.displaylist[index]);
 
-    var app = getApp();
+    //var app = getApp();
 
-    app.noticeData = this.data.displaylist[index];
+    //app.noticeData = this.data.displaylist[index];
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    this.loading();
   },
 
   /**
@@ -118,7 +132,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.loading();
+    
   },
 
   /**

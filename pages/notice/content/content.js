@@ -15,7 +15,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var noticeData = getApp().noticeData;
+    // console.log(options)
+    var noticeData = options;
     // console.log(noticeData);
     this.setData({
       title: noticeData.title,
