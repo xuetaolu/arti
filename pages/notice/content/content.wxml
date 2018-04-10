@@ -1,9 +1,0 @@
-<!--pages/notice/content/content.wxml-->
-<main homeURL="./../../home/home" bodyStyle="background-color: white">
-  <scroll-view class="page-content" scroll-y="true">
-    <view class="title">{{ title }}</view>
-    <view class="call">{{ call }}</view>
-    <view class="content">{{ content }}</view>
-    <view class="date">{{ date }}</view>
-  </scroll-view>
-</main>

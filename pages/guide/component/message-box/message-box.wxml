@@ -1,8 +1,0 @@
-<!--pages/guide/component/message-box/message-box.wxml-->
-<view class="msg-box">
-  <image class="icon" src="https://www.zhxy.xyz/img/guide/tickicon.png"></image>
-  <view class="title">{{ title }}</view>
-  <view class="msg">{{ msg }}</view>
-  <view class="append">{{ append }}</view>
-  <view style="height:50rpx"></view>
-</view>

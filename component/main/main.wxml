@@ -1,9 +1,0 @@
-<!--pages/guide/component/main/main.wxml-->
-<view class="container">
-  <view class="page-body" style="{{ bodyStyle }}">
-    <slot></slot>
-  </view>
-  <view class="page-foot" url="{{ homeURL }}" bind:tap='toHome'>
-    <image src="https://www.zhxy.xyz/img/homeicon.png"></image>
-  </view>
-</view>
