@@ -23,6 +23,10 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    toHome: function(e) {
+      wx.reLaunch({
+        url: this.properties.homeURL
+      })
+    }
   }
 })

@@ -3,7 +3,7 @@
   <view class="page-body" style="{{ bodyStyle }}">
     <slot></slot>
   </view>
-  <navigator class="page-foot" url="{{ homeURL }}">
+  <view class="page-foot" url="{{ homeURL }}" bind:tap='toHome'>
     <image src="https://www.zhxy.xyz/img/homeicon.png"></image>
-  </navigator>
+  </view>
 </view>
