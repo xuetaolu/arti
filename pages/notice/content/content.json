@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "详细内容",
+  "usingComponents": {
+    "main": "./../../../../component/main/main"
+  }
+}

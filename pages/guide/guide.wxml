@@ -1,0 +1,32 @@
+<!--pages/guide/guide.wxml-->
+<main homeURL="./../home/home" bodyStyle="background-image: url(https://www.zhxy.xyz/img/guide/{{ step != 0 ? 'map_clear.png' : 'map_dim.png'}})">
+  <view class="container-btn-option" wx:if="{{ step === 0 }}">
+    <view class="btn-option" wx:for-items="{{ option.option }}" id="{{ item.msg }}" bind:tap="select" wx:key>
+      <text>{{ item.msg }}</text>
+    </view>
+  </view>
+
+  <image class="notice" wx:if="{{ step >= firstStep && step <= finalStep }}" src="https://www.zhxy.xyz/img/guide/notice.png"></image>
+
+  <image wx:for-items="{{ frame.list }}" class="frame" src="{{'https://www.zhxy.xyz/img/guide/' + item.id + '.png'}}" style="height:{{ item.height }}; width:{{ item.width }}; left:{{ item.left }}; top:{{ item.top }};{{ item.step === step ? ' ' : 'display: none' }}" wx:key></image>
+
+  <image class="mark" src="https://www.zhxy.xyz/img/guide/mark.png" style="top:{{ mark.poslist[step - 1].top }}; left: {{ mark.poslist[step - 1].left }}" wx:if="{{ mark.poslist[step - 1].step }}"></image>
+
+  <image wx:for-items="{{ route.list }}" style="display: {{ item.step === step ? 'block' : 'none' }}" class="route" src="{{'https://www.zhxy.xyz/img/guide/' + item.id + '.png'}}" wx:key></image>
+
+  <image class="notice" wx:if="{{ step > finalStep }}" src="https://www.zhxy.xyz/img/guide/notice.png" ></image>
+
+  <message-box wx:if="{{ step > finalStep }}" title="报道成功" msg="{{ option.finalMsg.msg }}" append="{{ option.finalMsg.append }}"></message-box>
+
+  <view class="container-btn-option container-btn-bottom" wx:if="{{ step >= firstStep }}">
+    <view class="btn-option btn-bottom" bind:tap="nextstep" wx:if="{{ step >= firstStep && step <= finalStep }}">
+      <text>下一步</text>
+    </view>
+    <view class="btn-option btn-bottom" bind:tap="finish" wx:if="{{ step > finalStep }}">
+      <text>完成</text>
+    </view>
+  </view>
+
+</main>
+
+

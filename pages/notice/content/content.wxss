@@ -1,0 +1,29 @@
+/* pages/notice/content/content.wxss */
+.page-content{
+  height: 100%;
+  width: 96%;
+  margin: 0 0 0 auto;
+}
+
+.title{
+  font-size: 30rpx;
+  font-weight: 900;
+  margin: 40rpx 120rpx 40rpx;
+  text-align: center;
+}
+
+.call{
+  font-size: 28rpx;
+}
+
+.content{
+  font-size: 28rpx;
+  white-space: pre-wrap;
+  margin: 0 40rpx 0 20rpx;
+}
+
+.date{
+  font-size: 28rpx;
+  text-align: right;
+  margin: 40rpx 40rpx 40rpx 20rpx;
+}
