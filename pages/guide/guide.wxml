@@ -1,18 +1,18 @@
 <!--pages/guide/guide.wxml-->
-<main homeURL="./../home/home" bodyStyle="background-image: url(./img/{{ step != 0 ? 'map_clear.png' : 'map_dim.png'}})">
+<main homeURL="./../home/home" bodyStyle="background-image: url(https://www.zhxy.xyz/img/guide/{{ step != 0 ? 'map_clear.png' : 'map_dim.png'}})">
   <view class="container-btn-option" wx:if="{{ step === 0 }}">
     <view class="btn-option" wx:for-items="{{ option.option }}" id="{{ item.msg }}" bind:tap="select">
       <text>{{ item.msg }}</text>
     </view>
   </view>
 
-  <image class="notice" wx:if="{{ step >= firstStep && step <= finalStep }}" src="./../../img/notice.png"></image>
+  <image class="notice" wx:if="{{ step >= firstStep && step <= finalStep }}" src="https://www.zhxy.xyz/img/guide/notice.png"></image>
 
-  <image wx:for-items="{{ frame.list }}" class="frame" src="{{'./img/' + item.id + '.png'}}" style="height:{{ item.height }}; width:{{ item.width }}; left:{{ item.left }}; top:{{ item.top }};{{ item.step === step ? ' ' : 'display: none' }}"></image>
+  <image wx:for-items="{{ frame.list }}" class="frame" src="{{'https://www.zhxy.xyz/img/guide/' + item.id + '.png'}}" style="height:{{ item.height }}; width:{{ item.width }}; left:{{ item.left }}; top:{{ item.top }};{{ item.step === step ? ' ' : 'display: none' }}"></image>
 
   <image class="mark" src="./img/mark.png" style="top:{{ mark.poslist[step - 1].top }}; left: {{ mark.poslist[step - 1].left }}" wx:if="{{ mark.poslist[step - 1].step }}"></image>
 
-  <image wx:for-items="{{ route.list }}" style="display: {{ item.step === step ? 'block' : 'none' }}" class="route" src="{{'./img/' + item.id + '.png'}}"></image>
+  <image wx:for-items="{{ route.list }}" style="display: {{ item.step === step ? 'block' : 'none' }}" class="route" src="{{'https://www.zhxy.xyz/img/guide/' + item.id + '.png'}}"></image>
 
   <image class="notice" wx:if="{{ step > finalStep }}" src="./../../img/notice.png" ></image>
 

@@ -4,6 +4,6 @@
     <slot></slot>
   </view>
   <navigator class="page-foot" url="{{ homeURL }}">
-    <image src="./../../img/homeicon.png"></image>
-  </navigator> 
+    <image src="https://www.zhxy.xyz/img/homeicon.png"></image>
+  </navigator>
 </view>

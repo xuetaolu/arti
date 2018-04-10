@@ -73,6 +73,10 @@
   background-color: #afafaf;
 }
 
+.page-content-item:hover{
+ opacity: 1;  
+}
+
 .page-content-item-title{
   margin: 20rpx 15% 0 5%;
   width: 80%;
@@ -107,4 +111,9 @@
   margin: 0 auto;
   width: 50rpx;
   height: 50rpx;
+}
+
+.page-content-loading-info{
+  margin: 0 auto 20rpx auto;
+  text-align: center;
 }

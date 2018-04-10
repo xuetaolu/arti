@@ -1,10 +1,10 @@
 {
   "pages": [
-    "pages/notice/notice",
     "pages/home/home",
+    "pages/notice/notice",
     "pages/guide/guide",
-    "pages/index/index"
-
+    "pages/index/index",
+    "pages/notice/content/content"
   ],
   "window": {
     "backgroundTextStyle": "light",

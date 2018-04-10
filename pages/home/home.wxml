@@ -1,7 +1,7 @@
 <!--pages/home/home.wxml-->
 <view class="container">
   <view class="main-container {{picpop.pop ? 'container-fade' : ''}}">
-    <view class="page-head" style="background-image: url(./img/background.jpg); background-size: 100% 100%;">
+    <view class="page-head" style="background-image: url({{ imgURLCommon }}background.jpg); background-size: 100% 100%;">
       <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
       <block wx:else>
         <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>

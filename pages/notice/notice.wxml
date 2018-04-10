@@ -4,21 +4,22 @@
   <view class="page-head">
     <view class="page-head-title">校内通知</view>
     <view class="page-head-container">
-      <input placeholder-style="font-size:14px; color:#666666" placeholder="输入关键字"></input>
+      <input placeholder-style="font-size:14px; color:#666666" placeholder="输入关键字" bindinput="bindKeyInput"></input>
       <view class="page-head-container-line"></view>
-      <view class="page-head-container-icon">
-        <image src="./img/searchIcon.png"></image>
+      <view class="page-head-container-icon" bind:tap="search">
+        <image src="https://www.zhxy.xyz/img/notice/searchIcon.png"></image>
       </view>
     </view>
   </view>
 
-  <scroll-view class="page-content" scroll-y="true" bind:scrolltolower="lower" lower-threshold="50px">
-    <view class="page-content-item" wx:for-items="{{ displaylist }}" >
+  <scroll-view class="page-content" scroll-y="true" bind:scrolltolower="lower" lower-threshold="20px">
+    <navigator class="page-content-item" wx:for-items="{{ displaylist }}" url="./content/content" bind:tap="sendContent" id="{{ index }}">
       <view class="page-content-item-title">{{ item.title }}</view>
       <view class="page-content-item-date">{{ item.date }}</view>
+    </navigator>
+    <view class="page-content-item page-content-loading" style="{{ isLoading ? '' : 'display: none;'}}">
+      <image src="https://www.zhxy.xyz/img/notice/loadingIcon.gif" />
     </view>
-    <view class="page-content-item page-content-loading">
-      <image src="./img/loadingIcon.gif" style="{{ isLoading ? '' : 'display: none;'}}" />
-    </view>
+    <view class="page-content-loading-info" style="{{ noMoreFlag ? '' : 'display: none;'}}" >没有更多的信息了</view>
   </scroll-view>
 </main>

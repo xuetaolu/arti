@@ -24,9 +24,9 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
 
-    imgURLCommon: "./img/",
+    imgURLCommon: "https://www.zhxy.xyz/img/home/",
     imgSuffix: ".png",
-    picURLCommon: "./img/",
+    picURLCommon: "https://www.zhxy.xyz/img/home/",
     picSuffix: ".jpg",
     barlist: [
       {
